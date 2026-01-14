@@ -11,6 +11,6 @@ describe("App", () => {
         render(<App />);
         // Just checking if something renders, modifying to be generic for default Vite app
         // Default Vite app usually has "Vite + React" text
-        expect(screen.getByText(/Vite \+ React/i)).toBeInTheDocument();
+        expect(screen.getByText(/Suman \+ Devops/i)).toBeInTheDocument();
     });
 });
