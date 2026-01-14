@@ -39,6 +39,11 @@ pipeline{
 			stage("Deploy"){
         steps{
             echo "Deploying"
+            sh """
+            #!/bin/bash
+            cd dist
+            sudo cp -rv . /var/www/html
+            """
           }
       }
   }
