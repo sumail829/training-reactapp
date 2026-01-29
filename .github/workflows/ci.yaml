@@ -40,7 +40,7 @@ jobs:
         - name: copy content
           run: echo "${{secrets.SSH_KEY}}" > devops-tos.pem
         - name: login to ssh server
-          run: ssh -o StrictHostKeyChecking=no -i devops-tos.pem "{{vars.SSH_USeR}}"@"${{vars.SERVERUSER_IP}}" ls  
+          run: ssh -o StrictHostKeyChecking=no -i devops-tos.pem {{ vars.SSH_USER}}@${{ vars.SERVER_IP }} ls  
             
           
       
@@ -50,6 +50,7 @@ jobs:
 
 
       
+
 
 
 
