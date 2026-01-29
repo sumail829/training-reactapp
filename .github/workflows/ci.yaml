@@ -26,11 +26,25 @@ jobs:
           name: dist
           path: dist/
           retention-days: 1
+  deploy-on-aws:
+      needs: Build-Node-Artifacts
+      runs-on: ubuntu-latest
+      steps:
+        - name: download dist artifacts
+          uses: actions/download-artifact@v7.0.0
+          with:
+            name: dist
+        - name: List contests of dist folder
+          run: ls -al
+            
+          
+      
           
       
 
 
 
       
+
 
 
