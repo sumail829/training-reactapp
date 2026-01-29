@@ -34,6 +34,7 @@ jobs:
           uses: actions/download-artifact@v7.0.0
           with:
             name: dist
+            path: dist/
         - name: List contests of dist folder
           run: ls -al
             
@@ -45,6 +46,7 @@ jobs:
 
 
       
+
 
 
 
