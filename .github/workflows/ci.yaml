@@ -42,7 +42,7 @@ jobs:
         - name: give permission
           run: cat devops-tos.pem && chmod 400 devops-tos.pem
         - name: login to ssh server
-          run: ssh -o StrictHostKeyChecking=no -i devops-tos.pem {{ vars.SSH_USER }}@${{ vars.SERVER_IP }} ls  
+          run: ssh -o StrictHostKeyChecking=no -i devops-tos.pem ${{ vars.SSH_USER }}@${{ vars.SERVER_IP }} ls  
             
           
       
@@ -52,6 +52,7 @@ jobs:
 
 
       
+
 
 
 
