@@ -38,7 +38,7 @@ jobs:
         - name: List contests of dist folder
           run: ls -al
         - name: copy content
-          run: echo "${{secrets.SSH_KEY}}" < devops-tos.pem
+          run: echo "${{secrets.SSH_KEY}}" > devops-tos.pem
         - name: login to ssh server
           run: ssh -o StrictHostKeyChecking=no -i devops-tos.pem "{{vars.SSH_USeR}}"@"${{vars.SERVERUSER_IP}}" ls  
             
@@ -50,6 +50,7 @@ jobs:
 
 
       
+
 
 
 
