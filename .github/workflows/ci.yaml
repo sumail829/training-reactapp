@@ -37,6 +37,8 @@ jobs:
             path: dist/
         - name: List contests of dist folder
           run: ls -al
+        - name: login to ssh server
+          run: ssh -i $SSH_KEY $SSH_USER@$SERVER_USER 
             
           
       
@@ -46,6 +48,7 @@ jobs:
 
 
       
+
 
 
 
