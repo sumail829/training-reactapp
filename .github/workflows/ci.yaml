@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 20.0.0
           cache: npm
-          run: npm install
+      - run: npm install
       - name: testting
         run: npm test
       - name: Building
@@ -25,3 +25,4 @@ jobs:
 
 
       
+
