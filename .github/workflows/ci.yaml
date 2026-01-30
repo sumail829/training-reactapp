@@ -45,6 +45,7 @@ jobs:
           run: ssh -o StrictHostKeyChecking=no -i devops-tos.pem ${{ vars.SSH_USER }}@${{ vars.SERVER_IP }} << 'ENDSSH'
             if [ ! -d  /var/www/html/suman ]; then
               sudo mkdir /var/www/html/suman
+            fi
               sudo chown ubuntu /var/www/html/suman
             ENDSSH
         - name: copy dist folder to aws servver
@@ -58,6 +59,7 @@ jobs:
 
 
       
+
 
 
 
